@@ -22,3 +22,24 @@ The server listens on `http://localhost:8080` and serves the frontend files.
 
 ## API Example
 Visit `http://localhost:8080/api/hello` to see a sample JSON response.
+
+## Docker
+
+You can build a production image containing both the backend and frontend using
+Docker:
+
+```bash
+docker build -t netgraph2 .
+```
+
+Run the container directly:
+
+```bash
+docker run -p 8080:8080 netgraph2
+```
+
+Alternatively, use the provided `docker-compose.yml`:
+
+```bash
+docker compose up --build
+```
